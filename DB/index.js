@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const DBConcoctionString =process.env.MONGODBURL;
+const dotenv = require('dotenv').config();
+const MONGODBURL =process.env.MONGODBURL;
 
-mongoose.connect(DBConcoctionString,{
+mongoose.connect(MONGODBURL,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })

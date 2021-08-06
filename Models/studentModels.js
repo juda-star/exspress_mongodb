@@ -5,23 +5,23 @@ const Schema = mongoose.Schema;
 const studentSchema = new Schema({
   firstName: {
     type: String,
-    required: true,
+    // required: true,
   },
   lastName: {
     type: String,
-    required: true,
+    // required: true,
   },
   date: {
     type: Date,
-    required: Date.now,
+    default: Date.now,
   },
   Email: {
     type: String,
-    required: true,
+    // required: true,
   },
   age: {
     type: Number,
-    required: true,
-  },
+    // required: true,
+  }
 });
-module.exports=mongoose.model('student',studentSchema)
+module.exports = mongoose.model("Student", studentSchema);
